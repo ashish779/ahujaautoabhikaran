@@ -121,11 +121,15 @@
                 <h1 class="section-head">
                     Book Your Service</h1>
                     <form method="post" action="BookserviceController">
+                        @csrf
                 <div class="row">
                     <div class="form">
-                        <p>
-                            <span id="ctl00_ContentPlaceHolder1_lblMessage" class="successMsg"></span>
-                        </p>
+                        <div class="col-md-12">
+                            @if ($message = Session::get('success'))
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                            @endif
+                        </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <div class="col-sm-12">
@@ -136,32 +140,35 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <input name="ContactNo" type="text" id="ctl00_ContentPlaceHolder1_txtContactNo" class="form-control" placeholder="Contact No" />
-                                    <span id="ctl00_ContentPlaceHolder1_rfvContactNo" class="text-danger" style="display:none;">Please specify contact no.</span>
-                                    <span id="ctl00_ContentPlaceHolder1_revTelno" class="text-danger" style="display:none;">Please specify valid contact no.</span>
+                                    <span id="ContactNo" class="text-danger" style="display:none;">Please specify contact no.</span>
+                                    <span id="Telno" class="text-danger" style="display:none;">Please specify valid contact no.</span>
                                 </div>
                             </div>
-                            
-                            <div class="col-sm-12">
-                                    <input name="vehicalnumber" type="text" id="ctl00_ContentPlaceHolder1_txtName" class="form-control" placeholder="Add vehicle number " />
-                                    <span id="ctl00_ContentPlaceHolder1_rfvName" class="text-danger" style="display:none;">Please specify name</span>
-                                </div>
-                                <br><br>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" id="ctl00_ContentPlaceHolder1_txtEmail" class="form-control" placeholder="Email Id" />
+                                    <input name="vehicalnumber" type="text" id="ctl00_ContentPlaceHolder1_txtContactNo" class="form-control" placeholder="Add vehical number" />
+                                    <span id="ContactNo" class="text-danger" style="display:none;">Please specify contact no.</span>
+                                    <span id="Telno" class="text-danger" style="display:none;">Please specify valid contact no.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input name="Email" type="text" id="ctl00_ContentPlaceHolder1_txtEmail" class="form-control" placeholder="Email Id" />
                                    
-                                    <span id="ctl00_ContentPlaceHolder1_rfvEmailId" class="text-danger" style="display:none;">Please specify email id.</span>
+                                    <span id="EmailId" class="text-danger" style="display:none;">Please specify email id.</span>
                                     <span id="ctl00_ContentPlaceHolder1_revEmailId" class="text-danger" style="display:none;">Please enter valid email address</span>
                                 </div>
                             </div>
                         </div>
+                            
+                            
                         <div class="col-sm-6">
                             <div class="form-group hide">
                                 <div class="col-sm-12">
                                     <select name="ctl00$ContentPlaceHolder1$ddlLocation" id="ctl00_ContentPlaceHolder1_ddlLocation" class="form-control">
-	<option value="Indore">Indore</option>
+                                    <option value="Indore">Indore</option>
 
-</select>
+                                </select>
                                     <span id="ctl00_ContentPlaceHolder1_rfvCity" class="text-danger" style="display:none;">Please select location</span>
                                 </div>
                             </div>
@@ -195,10 +202,9 @@
 </select>
                                     <span id="ctl00_ContentPlaceHolder1_rfvVariant" class="text-danger" style="display:none;">Please select variant</span>
                                 </div>
-                            </div>
-                            
+                            </div>               
                             <div class="col-sm-8">
-                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;ValidateBookService&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSubmit" class="btn btn-mahindra col-md-6" />
+                                <input type="submit" name="Submit" value="Submit"  id="ctl00_ContentPlaceHolder1_btnSubmit" class="btn btn-mahindra col-md-6" />
                             </div>
                             <div class="clearfix">
                             </div>

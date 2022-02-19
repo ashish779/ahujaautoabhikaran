@@ -48,6 +48,7 @@ Route::get('Roadside',function()
     return view('Roadside');
 });
 Route::post('Contactcont',[Contactcont::class,'insert1']);
+
 Route::post('BookserviceController',[BookserviceController::class,'insert2']);
 
 

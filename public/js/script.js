@@ -492,6 +492,7 @@ $(document).ready(function () {
     $("[id*=ddlModel]").on('change', function () {
         var ModelName = $(this).val();
         var ModelID = $(".ddModel option:selected").attr('modelid');
+        console.log(ModelID);
         GetVariantName(ModelName, ModelID);
     });
 

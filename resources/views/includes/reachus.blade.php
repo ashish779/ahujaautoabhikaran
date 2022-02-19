@@ -13,6 +13,7 @@
     <div class="form-group">
         <span id="ctl00_EnquireForm2_lblMessage" class="successMsg"></span>
     </div>
+    
     <div class="form-group">
         <input  type="text" id="ctl00_EnquireForm2_txtName" class="flat form-control" placeholder="Name" name="name" />
         <span id="ctl00_EnquireForm2_rfvName" class="text-danger" style="display:none;">Please specify Name</span>

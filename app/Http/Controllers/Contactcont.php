@@ -21,7 +21,8 @@ class Contactcont extends Controller
         if($insertdata)
         
         {
-            return redirect()->route('index');
+            return back()->with('success','Thanks you for sending an enquiry.We will get in touch with you soon');
+            
         }
 
     }

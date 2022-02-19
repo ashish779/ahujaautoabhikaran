@@ -24,11 +24,9 @@ class BookserviceController extends Controller
         $inserted=$Bookservice->save();
         if($inserted)
         {
-            echo"inserted";
+            return back()->with('success',"Order has been successfuly  submitted");
         }
-        else{
-            echo"not inserted";
-        }
+      
      
     }
 }

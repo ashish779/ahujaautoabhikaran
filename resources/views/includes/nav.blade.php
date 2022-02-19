@@ -73,9 +73,5 @@
             </div>
         </div>
       <script>
-  $("#navi a").live("click", function(){
-  $("#navi a").removeClass("active");
-  $(this).addClass("active")
-});
 
    </script>
