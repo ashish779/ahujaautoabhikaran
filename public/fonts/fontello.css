@@ -52,14 +52,14 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-rupee:before { content: '\e800'; } /* 'î €' */
-.icon-download:before { content: '\e801'; } /* 'î ' */
-.icon-facebook:before { content: '\e802'; } /* 'î ‚' */
-.icon-twitter:before { content: '\e803'; } /* 'î ƒ' */
-.icon-gplus:before { content: '\e804'; } /* 'î „' */
-.icon-left-open-big:before { content: '\e805'; } /* 'î …' */
-.icon-right-open-big:before { content: '\e806'; } /* 'î †' */
-.icon-youtube:before { content: '\e807'; } /* 'î ‡' */
-.icon-down-dir:before { content: '\e808'; } /* 'î ˆ' */
-.icon-left-open:before { content: '\e809'; } /* 'î ‰' */
-.icon-right-open:before { content: '\e80a'; } /* 'î Š' */
+.icon-rupee:before { content: '\e800'; } /* '' */
+.icon-download:before { content: '\e801'; } /* '' */
+.icon-facebook:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\e803'; } /* '' */
+.icon-gplus:before { content: '\e804'; } /* '' */
+.icon-left-open-big:before { content: '\e805'; } /* '' */
+.icon-right-open-big:before { content: '\e806'; } /* '' */
+.icon-youtube:before { content: '\e807'; } /* '' */
+.icon-down-dir:before { content: '\e808'; } /* '' */
+.icon-left-open:before { content: '\e809'; } /* '' */
+.icon-right-open:before { content: '\e80a'; } /* '' */

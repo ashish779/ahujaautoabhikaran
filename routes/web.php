@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\Contactcont;
-use App\Http\Controllers\BookserviceController;
-
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,36 +16,43 @@ use App\Http\Controllers\BookserviceController;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('index',function()
-{
+
+Route::get('index', function () {
     return view('index');
-})->name('index');
-Route::get('insurance',function()
-{
+});
+
+Route::get('insurance', function () {
     return view('insurance');
 });
-Route::get('offers',function()
-{
+
+Route::get('offers', function () {
     return view('offers');
 });
-Route::get('onlinepayement',function()
-{
-    return view('onlinepayement');
-});
-Route::get('AboutUS',function()
-{
-    return view('AboutUS');
-});
-Route::get('ContactUS',function()
-{
-    return view('ContactUS');
-});
-Route::get('Roadside',function()
-{
-    return view('Roadside');
-});
-Route::post('Contactcont',[Contactcont::class,'insert1']);
 
-Route::post('BookserviceController',[BookserviceController::class,'insert2']);
+Route::get('make-online-payment', function () {
+    return view('make-online-payment');
+});
+
+Route::get('who-we-are', function () {
+    return view('who-we-are');
+});
+
+Route::get('locate-us', function () {
+    return view('locate-us');
+});
+
+Route::get('road-side-assistance', function () {
+    return view('road-side-assistance');
+});
+
+Route::get('Imprints', function () {
+    return view('Imprints');
+});
 
 
+
+Route::any('submitServiceAppointment', [PagesController::class,'submitServiceAppointment']);
+Route::any('submitEnquiry',[PagesController::class,'submitEnquiry']);
+Route::any('submitInsurance',[PagesController::class,'submitInsurance']);
+Route::any('submitEnquiry',[PagesController::class,'submitEnquiry']);
+Route::any('submitEnquiry',[PagesController::class,'submitEnquiry']);

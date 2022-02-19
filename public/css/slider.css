@@ -1,0 +1,175 @@
+/*!
+ * Slider for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+.slider {
+  display: block;
+  vertical-align: middle;
+  position: relative;
+}
+.slider.slider-horizontal {
+  width: 80%;
+  margin: 72px auto 30px;
+  height: 62px;
+}
+.slider.slider-horizontal .slider-track {
+  height: 10px;
+  width: 100%;
+  margin-top: -5px;
+  top: 50%;
+  left: 0;
+}
+.slider.slider-horizontal .slider-selection {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.slider.slider-horizontal .slider-handle {
+  margin-left: -10px;
+  margin-top: -5px;
+}
+.slider.slider-horizontal .slider-handle.triangle {
+  border-width: 0 10px 10px 10px;
+  width: 0;
+  height: 0;
+  border-bottom-color: #0480be;
+  margin-top: 0;
+}
+.slider.slider-horizontal .slider-handle:before
+{
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: -30px;
+    width: 200px;
+    height: 100px;
+    background: none;
+    background-image: url(../images/range-cars/eon.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+@media screen and (max-width: 767px)
+{
+    .slider.slider-horizontal .slider-handle:before
+    {
+        width: 152px;
+        height: 69px;
+        left: -67px;
+        top: -20px;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .slider.slider-horizontal .slider-handle:before
+    {
+        width: 100px;
+        height: 50px;
+        left: -39px;
+        top: -12px;
+    }
+}
+.slider.slider-horizontal .slider-handle[data-car="eon"]:before{background-image: url(../images/range-cars/eon.png);}
+.slider.slider-horizontal .slider-handle[data-car="4s-fluidic-verna"]:before{background-image: url(../images/range-cars/4s-fluidic-verna.png);}
+.slider.slider-horizontal .slider-handle[data-car="creta"]:before{background-image: url(../images/range-cars/creta.png);}
+.slider.slider-horizontal .slider-handle[data-car="grand-i10"]:before{background-image: url(../images/range-cars/Grand-i10.png);}
+.slider.slider-horizontal .slider-handle[data-car="i20-elite"]:before{background-image: url(../images/range-cars/i20-elite.png);}
+.slider.slider-horizontal .slider-handle[data-car="i10"]:before{background-image: url(../images/range-cars/i10.png);}
+.slider.slider-horizontal .slider-handle[data-car="i20-active"]:before{background-image: url(../images/range-cars/i20-active.png);}
+.slider.slider-horizontal .slider-handle[data-car="fluidic-elantra-neo"]:before{background-image: url(../images/range-cars/fluidic-elantra-neo.png);}
+.slider.slider-horizontal .slider-handle[data-car="santa-fe"]:before{background-image: url(../images/range-cars/santa-fe.png);}
+.slider.slider-horizontal .slider-handle[data-car="tucson"]:before{background-image: url(../images/range-cars/Tucson.png);}
+.slider.slider-horizontal .slider-handle[data-car="xcent"]:before{background-image: url(../images/range-cars/xcent.png);}
+.slider.slider-vertical {
+  height: 210px;
+  width: 20px;
+}
+.slider.slider-vertical .slider-track {
+  width: 10px;
+  height: 100%;
+  margin-left: -5px;
+  left: 50%;
+  top: 0;
+}
+.slider.slider-vertical .slider-selection {
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.slider.slider-vertical .slider-handle {
+  margin-left: -5px;
+  margin-top: -10px;
+}
+.slider.slider-vertical .slider-handle.triangle {
+  border-width: 10px 0 10px 10px;
+  width: 1px;
+  height: 1px;
+  border-left-color: #0480be;
+  margin-left: 0;
+}
+.slider input {
+  display: none;
+}
+.slider .tooltip-main
+{
+    opacity: 1;
+    font-size: 18px;    
+    margin-top: -62px;
+    margin-left: -15px;
+    z-index: 9;
+}
+.slider .tooltip-min, .slider .tooltip-max{ display: none;}
+.tooltip-arrow
+{
+    display: none;
+}
+.slider .tooltip-inner {
+  white-space: nowrap;
+  background: #323232;
+  border-radius: 0;
+}
+.slider.DP .tooltip-inner:before{content:'INR '}
+.slider.DP .tooltip-inner:after{content:'/-'}
+.slider.Tenure .tooltip-inner:after{content:' Months'}
+.slider-track {
+  position: absolute;
+  cursor: pointer;
+  background-color: #5B5B5B;
+    -webkit-box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #5B5B5B;
+    -moz-box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #5B5B5B;
+    box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #5B5B5B;
+}
+.slider-selection {
+  position: absolute;
+  background-color: #e41c39;
+    -webkit-box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #e41c39;
+    -moz-box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #e41c39;
+    box-shadow: 0 0 0 2px #ECECEC, 0 0 0 3px #e41c39;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.slider-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #0e90d2;
+    background-repeat: repeat-x;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);;
+    border: 0px solid transparent;
+    background-image: linear-gradient(to bottom, #149bdf, #0480be);
+}
+.slider-handle.round {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.slider-handle.triangle {
+  background: transparent none;
+}
